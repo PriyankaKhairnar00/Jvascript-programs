@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ 
+</head>
+<body >
+  <p id="color"></p>
+  <button onclick="randomColor()">add</button>
+  <script>
+    function randomColor(){
+    debugger;
+    let color="#";
+    let digits = '0123456789ABCDEF';
+    for(let i=0;i<6;i++){
+        // let num=Math.floor(Math.random()*16);
+        // if(num<10){
+        //     color+=num;
+        // }
+        // else{
+        //     switch(num){
+        //         case 10:
+        //             color+="A";
+        //             break;
+        //             case 11:
+        //   color += "B";
+        //   break;
+        // case 12:
+        //   color += "C";
+        //   break;
+        // case 13:
+        //   color += "D";
+        //   break;
+        // case 14:
+        //   color += "E";
+        //   break;
+        // case 15:
+        //   color += "F";
+        //   break;
+        //     }
+        // }
+        let randomDigit = Math.floor(Math.random() * 16);
+    // append the random number to the color string
+    color += digits[randomDigit];
+    }
+    document.getElementById('color').innerHTML=color;
+    document.querySelector('button').style.backgroundColor.body = color;
+}
+randomColor();
+  </script>
+</body>
+</html>
